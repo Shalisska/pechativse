@@ -34,15 +34,6 @@
   position: absolute;
   top: -35px;
 }
-.feedback__form {
-  display: none;
-  position: absolute;
-  width: 315px;
-  left: 50%;
-  margin-left: -157.5px;
-  margin-top: 200px;
-  z-index: 100;
-}
 .sidebar {
   float: left;
   width: 33.33333333%;
@@ -56,7 +47,7 @@ main {
   float: right;
   box-sizing: border-box;
   width: 66.66666667%;
-  padding: 35px 25px 0;
+  padding: 0 25px;
 }
 .footer {
   width: 790px;
@@ -69,7 +60,94 @@ main {
   width: 33.33333333%;
   vertical-align: middle;
 }
-.form__show {
+.form {
+  position: fixed;
+  left: 50%;
+  margin-top: 200px;
+  padding: 10px 25px 20px;
+  background: #860000;
+  border-radius: 5px;
+  color: #f8f8f7;
+}
+.form__esc {
+  position: absolute;
+  width: 13px;
+  height: 11px;
+  top: 2px;
+  right: 2px;
+  background: url("../img/icon-esc.png") no-repeat center center;
+  border: none;
+}
+.form__title {
+  margin-top: 0;
+  text-transform: uppercase;
+  font-size: 18.41px;
+}
+.form label {
+  font-size: 16.2px;
+  font-style: italic;
+  font-family: "Calibri", "Arial", sans-serif;
+}
+.form__hint {
+  font-size: 12.15px;
+  color: #e3caa2;
+}
+.form textarea {
+  display: block;
+  width: 99.4%;
+  border: none;
+}
+.form input:not([type="submit"]) {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+  color: #000;
+  border: none;
+  outline: none;
+}
+.form input[type="submit"] {
+  display: block;
+  margin: 30px auto 0;
+  padding: 5px 35px;
+  background: white;
+  color: #860000;
+  font-family: "Calibri", "Arial", sans-serif;
+  font-size: 19px;
+  text-transform: uppercase;
+  border-radius: 5px;
+}
+.form--callback {
+  width: 315px;
+  margin-left: -157.5px;
+}
+.form--order {
+  width: 700px;
+  margin-left: -350px;
+}
+/* ширма (полупрозрачное затенение под модальным окном) */
+.shim {
+  /* фиксируем, растягиваем на весь доступный экран */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: none;
+  z-index: 100;
+  /* если в модальном окне много содержимого, показываем скроллбар */
+  overflow: auto;
+  /* однопальцевый скролл для iPad*/
+  -webkit-overflow-scrolling: touch;
+}
+/* фикс для странностей в iPad */
+.shim > * {
+  -webkit-transform: translateZ(0px);
+}
+/* декоративная часть ширмы: делаем полупрозрачной и чёрной */
+.shim {
+  background: rgba(0, 0, 0, 0.5);
+}
+.popup-show {
   display: block;
 }
 body {
@@ -257,11 +335,10 @@ body {
   margin-top: 15px;
 }
 main {
-  padding-top: 70px;
   font-family: "Arial", sans-serif;
   font-size: 11px;
 }
-main .info:not(:first-child):before {
+main .info:not(:first-of-type):before {
   content: "";
   display: block;
   width: 147px;
@@ -371,51 +448,18 @@ main .price__list li:before {
   font-size: 12.98px;
   text-transform: uppercase;
 }
-.feedback__form {
-  padding: 10px 25px 20px;
-  background: #860000;
-  border-radius: 5px;
-  color: #f8f8f7;
+.B_crumbBox {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  margin: 55px auto 20px;
 }
-.feedback__form-esc {
-  position: absolute;
-  width: 13px;
-  height: 11px;
-  top: 2px;
-  right: 2px;
-  background: url("../img/icon-esc.png") no-repeat center center;
-  border: none;
+.B_crumbBox li {
+  display: inline-block;
 }
-.feedback__form-title {
-  margin-top: 0;
-  text-transform: uppercase;
-  font-size: 18.41px;
-}
-.feedback__form lable {
-  font-size: 16.2px;
-  font-style: italic;
-  font-family: "Calibri", "Arial", sans-serif;
-}
-.feedback__form-hint {
-  font-size: 12.15px;
-  color: #e3caa2;
-}
-.feedback__form input:not([type="submit"]) {
-  display: block;
-  width: 100%;
-  margin-bottom: 15px;
-  color: #000;
-  border: none;
-  outline: none;
-}
-.feedback__form input[type="submit"] {
-  display: block;
-  margin: 30px auto 0;
-  padding: 5px 35px;
-  background: white;
+.B_crumbBox li a {
+  text-decoration: none;
+  color: inherit;
   color: #860000;
-  font-family: "Calibri", "Arial", sans-serif;
-  font-size: 19px;
-  text-transform: uppercase;
-  border-radius: 5px;
 }

@@ -1,0 +1,16 @@
+form.feedback__form(action="#" method="post")
+    button.feedback__form-esc
+    p.feedback__form-title Обратная связь
+    
+    label Имя
+        span.feedback__form-hint (как к вам обращаться)
+        input(type="text" name="name" required)
+        
+    label Телефон
+        span.feedback__form-hint (в формате 89268524596)
+        input(type="tel" name="tel" pattern="[0-9]{12}")
+        
+    label E-mail
+        input(type="email" name="email")
+        
+    input(type="submit" value="Отправить")

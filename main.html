@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pechativse</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="layout-center-wrapper">
+      <header class="header clearfix">
+        <div class="header__contacts clearfix">
+          <div class="header__contacts-links">
+            <p class="header__contacts-links__tel">тел.: 8(926)843 65 52</p>
+            <p class="header__contacts-links__email">E-mail: pechativse@yandex.ru</p>
+          </div><a href="#" class="header__contacts-feedback">Обратная связь</a>
+          <form action="#" method="post" class="feedback__form">
+            <button class="feedback__form-esc"></button>
+            <p class="feedback__form-title">Обратная связь</p>
+            <label>Имя<span class="feedback__form-hint">(как к вам обращаться)</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>Телефон<span class="feedback__form-hint">(в формате 89268524596)</span>
+              <input type="tel" name="tel" pattern="[0-9]{12}">
+            </label>
+            <label>E-mail
+              <input type="email" name="email">
+            </label>
+            <input type="submit" value="Отправить">
+          </form>
+        </div>
+        <nav class="top-menu">
+          <ul class="top-menu__part">
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Услуги</a></li>
+            <li><a href="#">Отзывы</a></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+  </body>
+</html>

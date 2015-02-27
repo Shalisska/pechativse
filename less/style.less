@@ -1,6 +1,7 @@
 @import url("variables.less");
 @import url("mixin.less");
 @import url("main.less");
+@import url("form.less");
 
 body {
     font-family: @font-family;
@@ -208,13 +209,12 @@ body {
 
 //основное содержание страницы
 main {
-    padding-top: 70px;
     font-family: @font-family_text;
     font-size: @font-size;
 
     //блоки с информацией
     .info {
-        &:not(:first-child):before {
+        &:not(:first-of-type):before {
             content: "";
             display: block;
             width: 147px;
@@ -335,58 +335,19 @@ main {
     }
 }
 
-//форма обратной связи
-.feedback__form {
-    padding: 10px 25px 20px;
-    background: @form__bg;
-    border-radius: 5px;
-    color: @form__color;
 
-    &-esc {
-        position: absolute;
-        width: 13px;
-        height: 11px;
-        top: 2px;
-        right: 2px;
-        background: url("../img/icon-esc.png") no-repeat center center;
-        border: none;
-    }
 
-    &-title {
-        margin-top: 0;
-        text-transform: uppercase;
-        font-size: 18.41px;
-    }
-
-    lable {
-        font-size: 16.2px;
-        font-style: italic;
-        font-family: "Calibri", "Arial", sans-serif;
-    }
-
-    &-hint {
-        font-size: 12.15px;
-        color: #e3caa2;
-    }
-
-    input:not([type="submit"]) {
-        display: block;
-        width: 100%;
-        margin-bottom: 15px;
-        color: #000;
-        border: none;
-        outline: none;
-    }
-
-    input[type="submit"] {
-        display: block;
-        margin: 30px auto 0;
-        padding: 5px 35px;
-        background: white;
-        color: #860000;
-        font-family: "Calibri", "Arial", sans-serif;
-        font-size: 19px;
-        text-transform: uppercase;
-        border-radius: 5px;
+.B_crumbBox {
+    .reset-ul();
+    box-sizing: border-box;
+    margin: 55px auto 20px;
+    
+    li {
+        display: inline-block;
+        
+        a {
+            .reset-a();
+            color: @form__bg;
+        }
     }
 }

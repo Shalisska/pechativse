@@ -8,6 +8,45 @@
         <link href="../css/style.css" rel="stylesheet">        
     </head>
     <body>
+       
+       <div class="shim">
+                        <form class="form  form--callback" action="#" method="post">
+                            <button class="form__esc"></button>
+                            <p class="form__title">Обратная связь</p>
+                            <label>Имя <span class="form__hint">(как к вам обращаться)</span>
+                                <input type="text" name="name" required>
+                            </label>
+                            <label>Телефон <span class="form__hint">(в формате 89268524596)</span>
+                                <input type="tel" name="tel" pattern="[0-9]{12}">
+                            </label>
+                            <label>E-mail
+                                <input type="email" name="email">
+                            </label>
+                            <input type="submit" value="Отправить">
+                        </form>
+                    </div>
+                    
+                    <div class="shim">
+                        <form class="form  form--order " action="#" method="post">
+                            <button class="form__esc"></button>
+                            <p class="form__title">Обратная связь</p>
+                            <label>Имя <span class="form__hint">(как к вам обращаться)</span>
+                                <input type="text" name="name" required>
+                            </label>
+                            <label>Телефон <span class="form__hint">(в формате 89268524596)</span>
+                                <input type="tel" name="tel" pattern="[0-9]{12}">
+                            </label>
+                            <label>E-mail
+                                <input type="email" name="email">
+                            </label>
+                            <label><!--описание-->
+			                    Ваш заказ
+			                    <textarea name="text" rows="5"></textarea>
+			                </label>
+                            <input type="submit" value="Отправить">
+                        </form>
+                    </div>
+       
         <div class="layout-center-wrapper">
             <header class="header  clearfix">
                 <div class="header__contacts clearfix">
@@ -18,23 +57,6 @@
                     
                     
                     <a class="header__contacts-feedback" href="#">Обратная связь</a>
-                    
-                    
-                    
-                    <form class="feedback__form" action="#" method="post">
-                        <button class="feedback__form-esc"></button>
-                        <p class="feedback__form-title">Обратная связь</p>
-                        <lable>Имя <span class="feedback__form-hint">(как к вам обращаться)</span>
-                            <input type="text" name="name" required>
-                        </lable>
-                        <lable>Телефон <span class="feedback__form-hint">(в формате 89268524596)</span>
-                            <input type="tel" name="tel" pattern="[0-9]{12}">
-                        </lable>
-                        <lable>E-mail
-                            <input type="email" name="email">
-                        </lable>
-                        <input type="submit" value="Отправить">
-                    </form>
                 </div>
                 
                 
@@ -59,9 +81,12 @@
                 </nav>
                 
                 
-                <form class="search" action="#" method="get">
+                <!--<form class="search" action="#" method="get">
                     <input type="text" name="search" placeholder="поиск">
-                </form>            
+                </form> -->
+                
+                
+                                 
             </header>
             
             
@@ -89,6 +114,17 @@
                 
                 
                 <main>
+                   <ul class="B_crumbBox">
+				    <li><a href="#">
+				        <span>dddddd</span>
+				    </a></li>
+				    <li><a href="#">
+				        <span>dddddd</span>
+				    </a></li>
+				    <li><a href="#">
+				        <span>dddddd</span>
+				    </a></li>
+				</ul>
                     <div class="info">
                         <p class="info__title">Срочное изготовление печатей, штампов, факсимиле с доставкой по Москве.</p>
                         <p class="info__description">Их изготовление займет у нас от нескольких часов до нескольких дней. Скорость выполнения и стоимость заказа зависят от материала, сложности дизайн-проекта и вида оснастки изделия. Материал и оснастку для печати или штампа с реквизитами Вашей компании можно заказать по вашему желанию. Заказ на печати и штампы будет выполнен в максимально короткие сроки.</p>

@@ -1,0 +1,105 @@
+//форма обратной связи
+.form {
+//    display: none;
+    position: fixed;
+    left: 50%;
+    margin-top: 200px;
+    padding: 10px 25px 20px;
+    background: @form__bg;
+    border-radius: 5px;
+    color: @form__color;
+
+    &__esc {
+        position: absolute;
+        width: 13px;
+        height: 11px;
+        top: 2px;
+        right: 2px;
+        background: url("../img/icon-esc.png") no-repeat center center;
+        border: none;
+    }
+
+    &__title {
+        margin-top: 0;
+        text-transform: uppercase;
+        font-size: 18.41px;
+    }
+
+    label {
+        font-size: 16.2px;
+        font-style: italic;
+        font-family: "Calibri", "Arial", sans-serif;
+    }
+
+    &__hint {
+        font-size: 12.15px;
+        color: #e3caa2;
+    }
+    
+    textarea {
+        display: block;
+        width: 99.4%;
+        border: none;
+    }
+
+    input:not([type="submit"]) {
+        display: block;
+        width: 100%;
+        margin-bottom: 15px;
+        color: #000;
+        border: none;
+        outline: none;
+    }
+
+    input[type="submit"] {
+        display: block;
+        margin: 30px auto 0;
+        padding: 5px 35px;
+        background: white;
+        color: #860000;
+        font-family: "Calibri", "Arial", sans-serif;
+        font-size: 19px;
+        text-transform: uppercase;
+        border-radius: 5px;
+    }
+    
+    &--callback {
+        width: 315px;
+        margin-left: -(315px / 2);
+    }
+    
+    &--order {
+        width: 700px;
+        margin-left: -(700px / 2);
+    }
+}
+
+/* ширма (полупрозрачное затенение под модальным окном) */
+.shim {
+    /* фиксируем, растягиваем на весь доступный экран */
+    position: fixed;
+    bottom: 0; left: 0; top: 0; right: 0;
+    display: none;    
+    z-index: 100;
+
+    /* если в модальном окне много содержимого, показываем скроллбар */
+    overflow: auto;
+
+    /* однопальцевый скролл для iPad*/
+    -webkit-overflow-scrolling: touch;
+}
+
+/* фикс для странностей в iPad */
+.shim > * {
+    -webkit-transform: translateZ(0px);
+}
+
+/* декоративная часть ширмы: делаем полупрозрачной и чёрной */
+.shim {
+    background: rgba(0,0,0,0.5);
+}
+
+//клас для появления формы обратной связи
+.popup-show {
+    display: block;
+}

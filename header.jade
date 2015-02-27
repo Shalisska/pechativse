@@ -1,0 +1,16 @@
+-var topMenu1 = ["О компании", "Услуги", "Отзывы"]
+-var topMenu2 = ["Доставка", "Контакты", "Цены"]
+
+.header__contacts.clearfix
+    .header__contacts-links
+        p.header__contacts-links__tel тел.: 8(926)843 65 52
+        p.header__contacts-links__email E-mail: pechativse@yandex.ru
+        
+    a.header__contacts-feedback(href="#") Обратная связь
+    
+    include form_feedback
+    
+nav.top-menu
+    ul.top-menu__part
+        each item in topMenu1
+            li: a(href="#") #{item}
