@@ -1,0 +1,101 @@
+.clearfix:after {
+    content:'';
+    display:table;
+    clear:both;
+}
+
+//центровщик
+.layout-center-wrapper {
+    box-sizing: border-box;
+    width: 760px;
+    margin: auto;
+}
+
+//сетка хедера
+.header {
+    &__contacts {
+        &-links {
+            float: left;
+        }
+        
+        &-feedback {
+            float: right;
+        }
+    }
+    
+    //верхнее меню
+    .top-menu {
+        &__part {
+            .reset-ul ();
+            display: inline-block;
+            width: (754px - 130px) / 2;
+            
+            li {
+                display: inline-block;
+            }
+        }
+        
+        &__logo {
+            position: relative;
+            display: inline-block;
+            width: 130px;
+            height: 36px;
+            
+            img {
+                position: absolute;
+                top: -35px;
+            }
+        }
+    }
+}
+
+//форма обратной связи
+.feedback__form {
+    display: none;
+    position: absolute;
+    width: 315px;
+    left: 50%;
+    margin-left: -(315px / 2);
+    margin-top: 200px;
+    z-index: 100;
+}
+
+//боковое меню и примеры печатей
+.sidebar {
+    float: left;
+    width: 100% / 3;
+    
+    &__menu {
+        ul {
+            .reset-ul ();
+        }        
+    }
+}
+
+//осн часть сраницы
+main {
+    float: right;
+    box-sizing: border-box;
+    width: 100% / 3 * 2;
+    padding: 35px 25px 0;
+}
+
+//сетка футера
+.footer {
+    width: 790px;
+    font-size: 0;
+    
+    &__menu,
+    &__ordering,
+    &__contacts {
+        display: inline-block;
+        width: 100% / 3;
+        vertical-align: middle;
+    }
+}
+
+
+//клас для появления формы обратной связи
+.form__show {
+    display: block;
+}
